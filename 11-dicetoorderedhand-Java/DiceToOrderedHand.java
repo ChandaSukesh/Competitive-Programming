@@ -14,6 +14,48 @@
 public class DiceToOrderedHand {
 	public int diceToOrderedHand(int a, int b, int c) {
 		// your code goes here
-		return 0;
+		int min_value=minFn(a,b,c);
+		int max_value=maxFn(a,b,c);
+		int second_max=0;
+		if(max_value==a)
+		{
+			second_max=maxFn(0,b,c);
+		}
+		else if(max_value==b)
+		{
+			second_max=maxFn(a,0,c);
+		}
+		else
+		{
+			second_max=maxFn(a,b,0);
+		}
+		
+		return max_value*100 + second_max*10 + min_value*1;
+	}
+	public int maxFn(int x,int y, int z)
+	{
+		if(x>y && x>z)
+		{
+			return x;
+		}
+		if(y>x && y>z)
+		{
+			return y;
+		}
+		return z;
+		
+	}
+	public int minFn(int x,int y, int z)
+	{
+		if(x<y && x<z)
+		{
+			return x;
+		}
+		if(y<x && y<z)
+		{
+			return y;
+		}
+		return z;
+		
 	}	
 }
