@@ -6,7 +6,18 @@
 class MyMath {
 	public boolean isFactor(int f, int n){
 		// your code goes here
-
+		if(n==0)
+		{
+			return true;
+		}
+		if(f==0)
+		{
+			return false;
+		}
+		if(n%f==0)
+		{
+			return true;
+		}
 		return false;
 	}
 }

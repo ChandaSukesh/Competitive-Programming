@@ -12,7 +12,7 @@
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-import java.beans.Transient;
+// import java.beans.Transient;
 
 public class TestJUnit {
 
@@ -30,6 +30,6 @@ public class TestJUnit {
       assertEquals("1.", false, s.isFactor(0,6));
       assertEquals("2.", true, s.isFactor(6,0));
       assertEquals("3.", true, s.isFactor(0,0));
-      assertEquals("4.", true, s.isFactor(-2,4));  
-   }
+      assertEquals("4.", true, s.isFactor(-2,4));
+   }  
 }
