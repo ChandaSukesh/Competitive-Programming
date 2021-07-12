@@ -8,6 +8,13 @@
 public class HandToDice {
 	public int[] handToDice(int hand) {
 		// your code goes here
-		return new int[0];
+		int[] arr=new int[3];
+		for(int j=2;j>=0;j--)
+		{
+			arr[j]=hand%10;
+			hand=hand/10;
+		}
+		// return new int[0];
+		return arr;
 	}
 }
