@@ -1,3 +1,8 @@
+// import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+// import java.util.List;
+
 // This is the most complicated part. Write the function playstep2(hand, dice) that plays step 2 as
 // explained above. This function takes a hand, which is a 3-digit integer, and it also takes dice,
 // which is an integer containing all the future rolls of the dice. For example, if dice is 5341,
@@ -37,6 +42,102 @@
 public class PlayStep2 {
 	public int[] playStep2(int hand, int dice) {
 		// Your code goes here
-		return new int[0];		
+		int[] arr=new int[2];
+		// ArrayList<Integer> arr=new ArrayList<>();
+		String hand_value=String.valueOf(hand);
+		char digits[]=hand_value.toCharArray();
+		int a=digits[0] -'0';
+		int b=digits[1]-'0';
+		int c=digits[2]-'0';
+		int highestVal=0;
+		int dice_val=dice;
+		if(a==b || b==c || c==a)
+		{
+			if(a==b)
+			{
+				if(dice_val%10 > b)
+				{
+					highestVal= dice_val%10;
+					arr[0]=highestVal*100 + a*10 + b*1;
+				}
+				else{
+					arr[0]=a*100 + b*10 + (dice_val%10 )*1;
+				}
+				dice_val/=10;
+			}
+			else if(b==c){
+				// highestVal=maxFn(a,dice_val%10,0);
+				if(dice_val%10 > b)
+				{
+					highestVal= dice_val%10;
+					arr[0]=highestVal*100 + b*10 + c*1;
+				}
+				else{
+					arr[0]=b*100 + c*10 + (dice_val%10 )*1;
+				}
+				dice_val/=10;
+				
+			}
+			else{
+				if(dice_val%10 > c)
+				{
+					highestVal= dice_val%10;
+					arr[0]=highestVal*100 + a*10 + c*1;
+				}
+				else{
+					arr[0]=a*100 + c*10 + (dice_val%10 )*1;
+				}
+				dice_val/=10;
+			}
+			arr[1]=dice_val;
+		}
+		else{
+			if(maxFn(a,b,c)==a)
+			{
+				highestVal=a *100;
+			}
+			int j=10;
+			for(int i=0;i<2;i++)
+			{
+				highestVal=highestVal+(dice_val%10)*j;
+				// System.out.println("suk11: "+highestVal);
+				j=j/10;
+				dice_val=dice_val/10;
+			}
+			
+			arr[0]=diceToOrderedHand(highestVal);
+			arr[1]=dice_val;
+		}
+		
+		return arr;		
+	}
+	public int diceToOrderedHand(int value)
+	{
+		String temp=String.valueOf(value);
+		Integer[] lst=new Integer[temp.length()];
+		
+		for(int i=0;i<temp.length();i++)
+		{
+			lst[i]=temp.charAt(i)-'0';
+		}
+		Arrays.sort(lst,Collections.reverseOrder());
+		int res=0;
+		for(int i=0;i<lst.length;i++) {
+			 res=res*10+lst[i];
+		}
+		return res;
+	}
+	public int maxFn(int x,int y, int z)
+	{
+		if(x>y && x>z)
+		{
+			return x;
+		}
+		if(y>x && y>z)
+		{
+			return y;
+		}
+		return z;
+
 	}
 }
