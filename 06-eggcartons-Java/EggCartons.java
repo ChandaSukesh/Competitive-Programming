@@ -6,6 +6,11 @@
 class EggCartons {
 	public int eggCartons(int eggs) {
 		// Your code goes here....
-		return 0;
+		
+		double decValue=(double)eggs/12;
+		int ans=(int)Math.ceil(decValue);
+
+		return ans;
+		
 	}
 }
