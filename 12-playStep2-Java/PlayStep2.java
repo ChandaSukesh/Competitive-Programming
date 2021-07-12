@@ -1,7 +1,5 @@
-// import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-// import java.util.List;
 
 // This is the most complicated part. Write the function playstep2(hand, dice) that plays step 2 as
 // explained above. This function takes a hand, which is a 3-digit integer, and it also takes dice,
@@ -43,7 +41,6 @@ public class PlayStep2 {
 	public int[] playStep2(int hand, int dice) {
 		// Your code goes here
 		int[] arr=new int[2];
-		// ArrayList<Integer> arr=new ArrayList<>();
 		String hand_value=String.valueOf(hand);
 		char digits[]=hand_value.toCharArray();
 		int a=digits[0] -'0';
