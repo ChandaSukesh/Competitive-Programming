@@ -6,6 +6,11 @@
 public class MyMath {
 	public int nearestOdd(double n){
 		// your code goes here
-			return 0;
+		int val=(int)Math.ceil(n);
+		if(val%2==0)
+		{
+			return val-1;
+		}
+		return val;
 	}
 }
