@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "07-removeduplicate-Java"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Sukesh Chanda\\Desktop\\junit-4.9.jar"
+    ]
+}
