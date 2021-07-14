@@ -22,6 +22,7 @@ public class TestJUnit {
       Queue q = new Queue(1);
       q.enqueue(2);
       q.enqueue(3);
+      
       assertEquals("1.", 1, q.peek());
    }
 
@@ -30,11 +31,18 @@ public class TestJUnit {
       Queue q = new Queue(1);
       q.enqueue(2);
       q.enqueue(3);
+      
+      
       assertEquals("1.", 1, q.dequeue());
+      
       q.enqueue(4);
+      
       assertEquals("1.", 2, q.dequeue()); 
+      
       assertEquals("1.", 3, q.dequeue()); 
+      
       assertEquals("1.", 4, q.dequeue());  
+      
    }
 
  
