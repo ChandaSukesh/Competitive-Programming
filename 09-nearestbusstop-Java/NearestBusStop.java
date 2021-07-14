@@ -8,6 +8,18 @@
 class NearestBusStop {
 	public int nearestBusStop(int street){
 		// your code goes here
-		return -1;
+		double value=(double)street/8;
+		double check =(value- (int)(value))*10;
+
+		int roundedVal=0;
+		if((int)check==5)
+		{
+			roundedVal=(int)Math.floor(value);
+		}
+		else{
+			roundedVal=(int)Math.ceil(value);
+		}
+		
+		return (roundedVal*8);
 	}
 }
