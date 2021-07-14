@@ -13,7 +13,7 @@ public class Queue{
 		if(!isFull())
 		{
 			storage[rear]=new_ele;
-			rear=(rear+1)%20;
+			rear=(rear+1)%20; // used for circular 
 			size++;
 		}
 	}
