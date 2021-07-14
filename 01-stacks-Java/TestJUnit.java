@@ -24,7 +24,11 @@ public class TestJUnit {
       Stack stack = new Stack(e1);
       stack.push(e2);
       stack.push(e3);
+      
       assertEquals("1.", 3, stack.pop().value);
+
+      // System.out.println("suk: "+stack.pop().value);
+      
       assertEquals("2.", 2, stack.pop().value);
       assertEquals("3.", 1, stack.pop().value);
       assertEquals("4.", null, stack.pop());
