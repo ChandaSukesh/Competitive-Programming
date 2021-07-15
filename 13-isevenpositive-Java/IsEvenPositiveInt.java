@@ -6,6 +6,17 @@
 public class IsEvenPositiveInt {
 	public boolean isEvenPositiveInt(int x) {
 		// Your code goes here
+		try{
+			if(x==(int)x && x>=0 && x%2==0)
+			{
+				return true;
+			}
+		
+		}
+		catch(Exception e)
+		{
+			System.out.println("No craching");
+		}
 		return false;
 	}
 }
