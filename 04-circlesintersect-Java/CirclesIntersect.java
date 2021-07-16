@@ -7,6 +7,13 @@
 public class CirclesIntersect {
 	public boolean circlesIntersect(int x1, int y1, int r1, int x2, int y2, int r2){
 		// Your code goes here....
+		
+		int dist=(int)Math.sqrt( Math.pow((x1-x2),2)+ Math.pow((y1-y2),2));
+		
+		if(dist<=(int)(r1+r2))
+		{
+			return true;
+		}
 		return false;
 	}
 }
