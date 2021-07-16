@@ -13,7 +13,6 @@ public class MyMath {
 		
 		for(int i=0;i<str.length();i++)
 		{
-			
 			if(!hmap.containsKey(str.charAt(i)))
 			{
 				hmap.put(str.charAt(i),1);
@@ -33,11 +32,8 @@ public class MyMath {
 			
 			if(val>count)
 			{
-				
 				count=val;
-				// System.out.println(e.getKey());
 				ans=(char)e.getKey();
-				// ans=(int) e.getKey()-'0';
 			}
 		}
 		
