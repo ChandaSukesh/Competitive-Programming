@@ -18,7 +18,14 @@ public class MyMath {
 	 */
 	public int getKthDigit(int n, int k){
 		// Your code goes here...
-
-		return 0;
+		String strN=String.valueOf(n);
+		if(k>strN.length()-1)
+		{
+			return 0;
+		}
+		else{
+			int val=strN.charAt(strN.length()-k-1) - '0';
+			return val;	
+		}
 	}
 }
