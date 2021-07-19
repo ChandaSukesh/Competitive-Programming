@@ -6,6 +6,16 @@
 public class MyMath {
 	public boolean isPerfectSquare(int n) {
 		// Your code goes here
+		if(n>=0)
+		{
+			double squareVal=Math.sqrt(n);
+			int fValue=(int)Math.floor(squareVal);
+			if(squareVal-fValue==0)
+			{
+				return true;
+			}
+		}
+		
 		return false;
 	}
 }
