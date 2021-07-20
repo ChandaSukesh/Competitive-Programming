@@ -12,6 +12,19 @@ public class MyMath {
 		int[] arr = new int[2];
 
 		// Your code goes here...
+		double pow=Math.pow(b,2);
+		int b1=(int) (-b +(Math.sqrt(pow-(4*a*c))))/(2*a);
+		int b2=(int) (-b -(Math.sqrt(pow-(4*a*c))))/(2*a);
+
+		if(b1>b2)
+		{
+			arr[0]=b2;
+			arr[1]=b1;
+		}
+		else{
+			arr[0]=b1;
+			arr[1]=b2;
+		}
 		return arr;
 	}
 }
