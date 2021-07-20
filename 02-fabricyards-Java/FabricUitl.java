@@ -15,11 +15,15 @@
 class FabricUitl {
 	public int fabricYards(int inches) {
 		// Your code goes here...
-		return 0;
+		double value=(double)inches/36;
+		int ans=(int)Math.ceil(value);
+		return ans;
+		
 	}
 
 	public int fabricExcess(int inches) {
 		// Your code goes here...
-		return 0;
+		
+		return ((fabricYards(inches)*36) - inches);
 	}
 }
