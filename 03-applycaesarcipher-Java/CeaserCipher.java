@@ -13,12 +13,9 @@ public class CeaserCipher {
 	public String fun_applycaesarcipher(String msg, int shift){
 		// your code goes here
 		int len=msg.length();
-		
 		String strvalue= "";
-		
 		for (int i=0;i<len;i++)
 		{
-			
 			if (msg.charAt(i)>='a' && msg.charAt(i)<='z'){
 				char ch=(char)(msg.charAt(i)+shift);
 				if(ch<97)
