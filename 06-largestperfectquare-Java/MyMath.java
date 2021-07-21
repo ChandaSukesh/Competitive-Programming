@@ -10,6 +10,10 @@
 public class MyMath {
 	public int largestPerfectSquare(int n) {
 		// Your code goes here
-		return 1;
+
+		double sqrt=(double)Math.sqrt(n);
+		int lowest=(int)Math.floor(sqrt);
+		
+		return (lowest*lowest);
 	}
 }
