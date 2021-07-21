@@ -1,0 +1,10 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Sukesh Chanda\\Desktop\\junit-4.9.jar"
+    ],
+    "java.project.sourcePaths": [
+        "11-ismostlymagicsquare-Java",
+        "11-smallestdifference-Java"
+    ]
+}

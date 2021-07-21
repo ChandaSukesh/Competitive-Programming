@@ -9,6 +9,24 @@ public class SmallestDifference {
 
     public int smallestDifference(int[] a) {
         // Your code goes here
-        return -1;
+        if(a.length==0)
+        {
+            return -1;
+        }
+        int diff=0;
+        int ans=Integer.MAX_VALUE;
+        for(int i=0;i<a.length;i++)
+        {
+            for(int j=i+1;j<a.length;j++)
+            {
+                diff=Math.abs(a[j]-a[i]);
+                
+                if(diff<ans)
+                {
+                    ans=diff;
+                }
+            }
+        }
+        return ans;
     }
 }
