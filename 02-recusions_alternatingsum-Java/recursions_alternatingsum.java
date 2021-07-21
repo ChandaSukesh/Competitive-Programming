@@ -6,6 +6,22 @@
 
 class recursions_alternatingsum {
 	public int fun_recursions_alternatingsum(int[] l){
-		return 0;
+
+
+		int diff_even=helperFn(l,0,0);
+		int diff_odd=helperFn(l,1,0);
+		return (diff_even-diff_odd);
+	}
+
+	
+	
+	public int helperFn(int[] l,int first,int sum)
+	{
+		if(first>=l.length)
+		{
+			return sum;
+		}
+		sum+=l[first];
+		return helperFn(l,first+2,sum);
 	}
 }
