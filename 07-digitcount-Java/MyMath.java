@@ -8,6 +8,17 @@
 public class MyMath {
 	public int digitCount(int n) {
 		// Your code goes here...
-		return 0;
+		n=Math.abs(n);
+		if(n==0)
+		{
+			return 1;
+		}
+		int count=0;
+		while(n>0)
+		{
+			n=n/10;
+			count=count+1;
+		}
+		return count;
 	}
 }
