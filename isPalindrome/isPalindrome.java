@@ -27,16 +27,16 @@ class isPalindrome{
     {
         String str=String.valueOf(n);
         int len1=0;
-        int len2=str.length();
+        int len2=str.length()-1;
 
-        while(len1>len2)
+        while(len1<len2)
         {
             if(str.charAt(len1) != str.charAt(len2))
             {
                 return false;
             }
-            len1+=1;
-            len2+=1;
+            len1=len1+1;
+            len2=len2-1;
         }
         return true;
     }
