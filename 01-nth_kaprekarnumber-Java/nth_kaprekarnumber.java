@@ -10,6 +10,6 @@
 
 class nth_kaprekarnumber {
 	public long fun_nth_kaprekarnumber(int n){
-		return 1;
+		
 	} 
 }
