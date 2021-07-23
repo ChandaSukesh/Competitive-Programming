@@ -17,6 +17,49 @@
 public class HappyNumber {
 	public int nthHappyNumber(int n){
 		// Your code goes here...
-		return 0;	
+		int count=0;
+		int found=0;
+		while(count<n)
+		{
+			found=found+1;
+			if(isHappyPrime(found))
+			{
+				count+=1;
+			}
+		}
+
+		return found;	
+		
 	}
+	public int checkSum(int n)
+	{
+		return (n*n);
+	}
+
+	public boolean isHappyPrime(int k) {
+		// Your code goes here..
+		int sum=0;
+		while(sum != 1 && sum != 4)
+		{
+         	sum=0;
+			while(k>0)
+			{
+				int m=k%10;
+				sum+=checkSum(m);
+            	k=k/10;
+			}
+			k=sum;
+			if(sum==1)
+			{
+				return true;
+			}
+			if(sum<1)
+			{
+				return false;
+			}
+		}
+		
+		return false;
+	}
+
 }
