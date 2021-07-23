@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "08-gcd-Java"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Sukesh Chanda\\Desktop\\junit-4.9.jar"
+    ]
+}

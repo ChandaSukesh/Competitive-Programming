@@ -11,6 +11,11 @@
 public class MyMath {
 	public int gcd(int m, int n) {
 		// Your code goes here...
-		return 1;
+		if(n==0)
+		{
+			return m;
+		}
+		int mod=m%n;
+		return (gcd(n,mod));
 	}
 }
