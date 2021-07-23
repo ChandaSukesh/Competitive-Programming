@@ -10,16 +10,72 @@ class HappyNumber {
 
 	public boolean isPrime(int k) {
 		// Your code goes here...
-		return false;
+		if(k<2)
+		{
+			return false;
+		}
+		if(k==2)
+		{
+			return true;
+		}
+		if(k%2==0)
+		{
+			return false;
+		}
+		for(int i=3;i<(int)Math.sqrt(k);i++)
+		{
+			if(k%i==0)
+			{
+				return false;
+			}
+		}
+		return true;
 	}
 
 	public boolean isHappyPrime(int k) {
-		// Your code goes here...
+		// Your code goes here..
+		int sum=0;
+		while(sum != 1 && sum != 4)
+		{
+         	sum=0;
+			while(k>0)
+			{
+				int m=k%10;
+				sum+=checkSum(m);
+            	k=k/10;
+			}
+			k=sum;
+			if(sum==1)
+			{
+				return true;
+			}
+			if(sum<1)
+			{
+				return false;
+			}
+		}
+		
 		return false;
+	}
+
+	public int checkSum(int n)
+	{
+		return (n*n);
 	}
 
 	public int nthHappyPrime(int n){
 		// Your code goes here...
-		return 0;	
+		int count=0;
+		int found=0;
+		while(count<n)
+		{
+			found=found+1;
+			if(isHappyPrime(found) && isPrime(found))
+			{
+				count+=1;
+			}
+		}
+
+		return found;	
 	}
 }

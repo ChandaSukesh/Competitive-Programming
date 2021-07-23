@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Sukesh Chanda\\Desktop\\junit-4.9.jar"
+    ],
+    "java.project.sourcePaths": [
+        "02-nth_happy_prime-Java"
+    ]
+}
