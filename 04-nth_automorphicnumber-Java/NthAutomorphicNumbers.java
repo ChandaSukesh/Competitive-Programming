@@ -5,6 +5,27 @@
 public class NthAutomorphicNumbers {
 	public long nthAutomorphicNumbers(int n) {
 		// Your code goes here
-		return -1;
+		long count=0;
+		long found=-1;
+		while(count<n)
+		{
+			found=found+1;
+			if(automorphic(n))
+			{
+				count=count+1;
+			}
+		}
+		return found;
+	}
+
+	public boolean automorphic(int n)
+	{
+		long square=(n*n);
+		int last=(int)square%10;
+		if(last==n)
+		{
+			return true;
+		}
+		return false;
 	}
 }
