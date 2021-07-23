@@ -19,7 +19,7 @@ public class HappyNumber {
 
 	public boolean isHappyNumber(int n) {
 		// your code goes here
-		int sum=-Integer.MIN_VALUE;
+		int sum=0;
 		while(sum != 1 && sum != 4)
 		{
          	sum=0;
@@ -27,7 +27,7 @@ public class HappyNumber {
 			{
 				int m=n%10;
 				sum+=checkSum(m);
-            n=n/10;
+            	n=n/10;
 			}
 			n=sum;
 			if(sum==1)
