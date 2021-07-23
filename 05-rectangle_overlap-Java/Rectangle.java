@@ -15,7 +15,10 @@ public class Rectangle {
 	int left2, int top2, 
 	int width2, int height2) {
 		// Your code goes here...
-
+		if(((left2>left1) && (left2>(left1+width1))) || ((left1>left2) && (left1>(left2+width2))) || ((top1>top2) && top2>(top1+height1)) || ((top2>top1) && top1>(top2+height2)))
+		{
+			return false;
+		}
 		return true;
 	}
 }
