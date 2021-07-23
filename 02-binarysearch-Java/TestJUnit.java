@@ -29,4 +29,11 @@ public class TestJUnit {
       BinarySearch s = new BinarySearch();
       assertEquals("1.", 4, s.binary_search(input_array,15));  
    }
+
+   @Test
+   public void testCase3() {
+      int[] input_array = {1,2,3,4,5,6,7,8};
+      BinarySearch s = new BinarySearch();
+      assertEquals("1.", 5, s.binary_search(input_array,6));  
+   }
 }
