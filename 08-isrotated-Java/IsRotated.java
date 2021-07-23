@@ -6,6 +6,16 @@
 public class IsRotated {
 	public boolean isRotated(String str1, String str2) {
 		// Your code goes here
+		int len=str1.length();
+		for(int i=0;i<str1.length();i++)
+		{
+			String str=str1.substring(i, len) + str1.substring(0, i);
+			// System.out.println("suk: "+str);
+			if(str.equals(str2))
+			{
+				return true;
+			}
+		}
 		return false;
 	}
 }
