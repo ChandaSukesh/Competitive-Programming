@@ -9,6 +9,33 @@
 public class MyString {
 	public String interleave(String s1, String s2) {
 		//	Your code goes here....
-		return "";
+		int len=s2.length();
+		int maxlen=s1.length();
+		String str="";
+		if(s1.length()<s2.length())
+		{
+			len=s1.length();
+			maxlen=s2.length();
+		}
+		int i=0;
+		for(i=0;i<len;i++)
+		{
+			str+=s1.charAt(i);
+			str+=s2.charAt(i);
+		}
+		
+		for(int j=i;j<maxlen;j++)
+		{
+			if(s1.length()>s2.length())
+			{
+				str+=s1.charAt(j);
+				
+			}
+			else{
+				str+=s2.charAt(j);
+			}
+		}
+		
+		return str;
 	}
 }
