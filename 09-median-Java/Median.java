@@ -6,6 +6,28 @@
 public class Median {
 	public int median(double[] arr) {
 		// Your code goes here
-		return 0;
+		int len=arr.length;
+		if(len==0)
+		{
+			return 0;
+		}
+		if(len==1)
+		{
+			return (int)arr[0];
+		}
+		
+		int mid=0;
+		if(len%2!=0)
+		{
+			
+			mid=(int)arr[len/2];
+		}
+		else{
+			// 
+			
+			mid=(int)Math.floor(arr[len/2 -1] + arr[(len/2 -1) + 1])/2;
+			
+		}
+		return mid;
 	}
 }
