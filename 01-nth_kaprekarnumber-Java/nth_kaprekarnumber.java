@@ -10,6 +10,58 @@
 
 class nth_kaprekarnumber {
 	public long fun_nth_kaprekarnumber(int n){
+		// for (int i=1; i<500; i++)
+		// {
+		// 	if (checkKaprekar(i))
+		// 	 System.out.print(i + " ");
+		// }
 		
-	} 
+		
+		// return -1;
+		int count=0;
+		long found=0;
+		while(count<=n)
+		{
+			found=found+1;
+			if(checkKaprekar(found))
+			{
+				count+=1;
+			}
+		}
+		return found;
+	}
+
+	public boolean checkKaprekar(long n)
+	{
+		if(n==1)
+		{
+			return true;
+		}
+		long sqre=(n*n);
+		long sqreAns=sqre;
+		int digitCount=0;
+
+		while(sqre>0)
+		{
+			digitCount+=1;
+			sqre=sqre/10;
+		}
+
+		for(int i=1;i<digitCount;i++)
+		{
+			int ans=(int)Math.pow(10,i);
+			if(ans==n)
+			{
+				continue;
+			}
+			long sum=sqreAns/ans + sqreAns%ans ;
+
+			if(sum==n)
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
 }
