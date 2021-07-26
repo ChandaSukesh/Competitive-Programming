@@ -17,6 +17,8 @@
 
 class wordwrap {
 	public String fun_wordwrap(String s, int n){
+		
+
 		s=s.trim();
 		s=s.replaceAll(" ","-");
 
@@ -47,5 +49,6 @@ class wordwrap {
 
 		}
 		return str;
+
 	}
 }
