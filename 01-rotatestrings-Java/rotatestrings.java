@@ -6,6 +6,13 @@
 
 class rotatestrings {
 	public String fun_rotatestrings(String s, int n){
-		return s;
+
+		if(n>s.length() || n<0)
+		{
+			n=Math.abs(Math.abs(n)-s.length());
+		}
+		
+		String str=s.substring(n,s.length()) + s.substring(0, n);
+		return str;
 	}
 }
