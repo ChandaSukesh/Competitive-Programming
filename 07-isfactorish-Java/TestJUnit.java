@@ -22,7 +22,7 @@ public class TestJUnit {
       assertEquals("1.", true, s.fun_isfactorish(412));
       assertEquals("2.",  true, s.fun_isfactorish(-412));
       assertEquals("3.", false, s.fun_isfactorish(4128));
-      assertEquals("3.", false, s.fun_isfactorish(112));
+      assertEquals("4.", false, s.fun_isfactorish(112));
    }
 
    @Test
