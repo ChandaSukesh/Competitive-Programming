@@ -16,14 +16,14 @@ import java.beans.Transient;
 
 public class TestJUnit {
 
-   @Test
-   public void testCase1() {
-      hasnoprimes s = new hasnoprimes();
-      int[][] arr = {{12,4,6}, {8,12,14},{6,18}};
-      int[][] arr1 = {{2}};
-      assertEquals("1.",  true, s.fun_hasnoprimes(arr));
-      assertEquals("2.",  false, s.fun_hasnoprimes(arr1));
-   }
+   // @Test
+   // public void testCase1() {
+   //    hasnoprimes s = new hasnoprimes();
+   //    int[][] arr = {{12,4,6}, {8,12,14},{6,18}};
+   //    int[][] arr1 = {{2}};
+   //    assertEquals("1.",  true, s.fun_hasnoprimes(arr));
+   //    assertEquals("2.",  false, s.fun_hasnoprimes(arr1));
+   // }
 
 
    @Test
