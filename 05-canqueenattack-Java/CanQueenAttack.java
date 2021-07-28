@@ -6,6 +6,18 @@
 public class CanQueenAttack {
 	public boolean canQueenAttack(int x, int y, int a, int b) {
 		// Your code goes here
+		if(x==a)
+		{
+			return true;
+		}
+		if(y==b)
+		{
+			return true;
+		}
+		if((x-a)==(y-b))
+		{
+			return true;
+		}
 		return false;
 	}
 }
