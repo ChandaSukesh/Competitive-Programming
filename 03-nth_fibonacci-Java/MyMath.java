@@ -10,6 +10,48 @@
 public class MyMath {
 	public int nthFibonacciNumber(int n) {
 		// Your code goes here...
-		return 0;
-	}
+		int a=1;
+		int b=1;
+		int c=0;
+		if(n==0)
+		{
+			return 1;
+		}
+		if(n==1)
+		{
+			return 1;
+		}
+		n=n-1;
+		while(n>0)
+		{
+			
+			c=a+b;
+			int temp=b;
+			b=c;
+			a=temp;
+			n-=1;
+		}
+
+		return c;
+		
+	// 	int count=0;
+	// 	int found=0;
+	// 	while(count<n)
+	// 	{
+	// 		found+=1;
+	// 		if(checkFibonacci(found))
+	// 		{
+	// 			count+=1;
+	// 		}
+			
+	// 	}
+	// 	return found;
+	// }
+
+	// public boolean checkFibonacci(int n)
+	// {
+		
+	// 	return false;
+	// }
+}
 }
