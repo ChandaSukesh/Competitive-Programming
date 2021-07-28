@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 // hasDuplicates(L) [15 pts]
 // Write the function hasDuplicates(L) that takes a 2d list L of arbitrary values, and returns True if L 
 // contains any duplicate values (that is, 
@@ -6,6 +8,18 @@
 public class HasDuplicates {
 	public boolean hasDuplicates(int[][] arr) {
 		// Your code goes here
+		HashSet<Integer> hset=new HashSet<>();
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr[i].length;j++)
+			{
+				if(!hset.contains(arr[i][j]))
+					hset.add(arr[i][j]);
+				else
+					return true;
+
+			}
+		}
 		return false;
 	}
 }
