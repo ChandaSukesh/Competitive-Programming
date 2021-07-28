@@ -5,6 +5,17 @@
 class IsRectangular {
 	public boolean isRectangular(int[][] arr) {
 		// Your code goes here...
-		return false;
+	
+		int k=arr[0].length;
+		for(int i=0;i<arr.length;i++)
+		{
+			int j=arr[i].length;
+			if(k!=j)
+			{
+				return false;
+			}
+			k=j;
+		}
+		return true;
 	}
 }

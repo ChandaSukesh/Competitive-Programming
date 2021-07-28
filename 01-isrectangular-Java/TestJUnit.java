@@ -18,21 +18,21 @@ public class TestJUnit {
 
    @Test
    public void testCase1() {
-      isrectangular s = new isrectangular();
+      IsRectangular s = new IsRectangular();
       int[][] arr = {{1,2,3}, {1,1}};
       int[][] arr1 = {{1,2,3},{1,1,2}};
-      assertEquals("1.", false, s.fun_isrectangular(arr));
-      assertEquals("2.", true, s.fun_isrectangular(arr1));
+      assertEquals("1.", false, s.isRectangular(arr));
+      assertEquals("2.", true, s.isRectangular(arr1));
    }
 
 
    @Test
    public void testCase2() {
-      isrectangular s = new isrectangular();
+      IsRectangular s = new IsRectangular();
       int[][] arr = {{},{}};
       int[][] arr1 = {{1,2},{1,1},{1,2,3}};
-      assertEquals("1.", true, s.fun_isrectangular(arr));
-      assertEquals("2.", false, s.fun_isrectangular(arr1));
+      assertEquals("1.", true, s.isRectangular(arr));
+      assertEquals("2.", false, s.isRectangular(arr1));
    }
 }
 
