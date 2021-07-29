@@ -6,6 +6,28 @@
 public class NthPronicNumber {
 	public long nthPronicNumber(int n) {
 		// Your code goes here
-		return 1;
+		int count=0;
+        long found=0L;
+        while(count<n)
+		{
+			found+=1;
+			if(checkPronic(found))
+			{
+				count+=1;
+			}
+		}
+		return found;
+	}
+
+	public boolean checkPronic(long n)
+	{
+		for(int i=0;i<Math.sqrt(n);i++)
+		{
+			if(n==(i*(i+1)))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 }
