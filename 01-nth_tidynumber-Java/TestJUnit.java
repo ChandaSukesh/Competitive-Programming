@@ -23,7 +23,7 @@ public class TestJUnit {
       assertEquals("1.", 1, s.fun_nth_tidynumber(0));
       assertEquals("2.", 2, s.fun_nth_tidynumber(1));
       assertEquals("3.", 6, s.fun_nth_tidynumber(5));
-      assertEquals("3.", 17, s.fun_nth_tidynumber(15));
+      assertEquals("4.", 17, s.fun_nth_tidynumber(15));
    }
 
 
@@ -34,8 +34,8 @@ public class TestJUnit {
       assertEquals("1.", 46, s.fun_nth_tidynumber(35));
       assertEquals("2.", 79, s.fun_nth_tidynumber(50)); 
       assertEquals("3.", 223, s.fun_nth_tidynumber(100)); 
-      assertEquals("3.", 1156, s.fun_nth_tidynumber(250)); 
-      assertEquals("3.", 2888, s.fun_nth_tidynumber(500)); 
+      assertEquals("4.", 1156, s.fun_nth_tidynumber(250)); 
+      assertEquals("5.", 2888, s.fun_nth_tidynumber(500)); 
    }
 }
 

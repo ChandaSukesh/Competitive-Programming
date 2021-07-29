@@ -11,6 +11,33 @@
 
 class nth_tidynumber {
 	public int fun_nth_tidynumber(int n){
-		return 0;
+		int count=0;
+		int found=0;
+		while(count<=n)
+		{
+			found+=1;
+			if(checkTidy(found))
+			{
+				count+=1;
+			}
+		}
+		return found;
+	}
+	public boolean checkTidy(int n)
+	{
+
+		int val=Integer.MAX_VALUE; 
+		while(n>0)
+		{
+			
+			int m=n%10;
+			if(m>val || (m==0 && val==Integer.MAX_VALUE))
+			{
+				return false;
+			}
+			n/=10;
+			val=m;
+		}
+		return true;
 	}
 }
