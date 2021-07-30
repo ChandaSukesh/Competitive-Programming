@@ -13,6 +13,34 @@
 # Again, you do not need to sort the list. We didn't sort it in our sample solution. We just tracked the two largest 
 # values as we recursively traversed the list. Also, you may not use loops/iteration in this problem
 
+import sys
 def recursion_secondlargest(L):
 	# Your code goes here
-	pass
+	if len(L)==0 or len(L)==1:
+		return None
+	else:
+		count=2
+		return maxFn(count,L)
+
+def maxFn(value,L=[]):
+	maxValue=highestValue(L)
+	
+
+	if L.count(maxValue)>=2:
+		return maxValue
+	elif value==1:
+		return maxValue
+	else:
+		newlst=[]
+		for i in L:
+			if i!=maxValue:
+				newlst.append(i)
+		return maxFn(value-1,newlst)
+
+
+def highestValue(L=[]):
+	value=-sys.maxsize-1
+	for i in range(0,len(L)):
+		if L[i]>value:
+			value=L[i]
+	return value
