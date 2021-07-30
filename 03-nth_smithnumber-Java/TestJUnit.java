@@ -19,14 +19,21 @@ public class TestJUnit {
 		assertEquals("1.", 4, new nth_smithnumber().fun_nth_smithnumber(0));
       assertEquals("2.", 22, new nth_smithnumber().fun_nth_smithnumber(1));
       assertEquals("3.", 27, new nth_smithnumber().fun_nth_smithnumber(2));
+      
       assertEquals("4.", 94, new nth_smithnumber().fun_nth_smithnumber(5));
    }
 
    @Test
    public void testCase2() {
-      assertEquals("1.", 274, new nth_smithnumber().fun_nth_smithnumber(10));
-      assertEquals("2.", 382, new nth_smithnumber().fun_nth_smithnumber(15));
-      assertEquals("3.", 438, new nth_smithnumber().fun_nth_smithnumber(17));
-      assertEquals("4.", 483, new nth_smithnumber().fun_nth_smithnumber(19));
+      assertEquals("1.", 274, new nth_smithnumber().fun_nth_smithnumber(9));
+      assertEquals("2.", 319, new nth_smithnumber().fun_nth_smithnumber(10));
+      assertEquals("3.", 346, new nth_smithnumber().fun_nth_smithnumber(11));
+      assertEquals("4.", 355, new nth_smithnumber().fun_nth_smithnumber(12));
+
+      //wrong test cases
+      // assertEquals("1.", 274, new nth_smithnumber().fun_nth_smithnumber(10));
+      // assertEquals("2.", 382, new nth_smithnumber().fun_nth_smithnumber(15));
+      // assertEquals("3.", 438, new nth_smithnumber().fun_nth_smithnumber(17));
+      // assertEquals("4.", 483, new nth_smithnumber().fun_nth_smithnumber(19));
    }
 }
