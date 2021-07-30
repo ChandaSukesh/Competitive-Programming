@@ -7,6 +7,17 @@
 import java.lang.Math; 
 public class carrylessadd {
 	public int fun_carrylessadd(int x, int y) {
-		return 0;
+		int ans=0;
+		int count=0;
+		while(x>0 || y>0)
+		{
+			int a=x%10;
+			int b=y%10;
+			ans+=(a+b)%10 * ((int)Math.pow(10,count));
+			x=x/10;
+			y=y/10;
+			count+=1;
+		}
+		return ans;
 	}
 }
