@@ -22,4 +22,17 @@
 
 def inverselookandsay(a):
 	# Your code goes here
-	pass
+	
+	lst=[]
+	if len(a[0])==0:
+		return lst
+	firstNum=0
+	secondNum=0
+
+	for i in range(0,len(a)):
+		firstNum=a[i][0]
+		secondNum=a[i][1]
+		for i in range(0,firstNum):
+			lst.append(secondNum)
+	
+	return lst
