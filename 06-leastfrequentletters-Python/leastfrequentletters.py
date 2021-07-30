@@ -9,4 +9,17 @@
 
 def leastfrequentletters(s):
 	# Your code goes here
-	pass
+	s=s.lower()
+	stralpla=""
+	ans=""
+	for i in s:
+		if i.isalpha():
+			stralpla+=i
+	for k in stralpla:
+		if stralpla.count(k)==1:
+			ans+=k
+	
+	return "".join(sorted(ans))
+
+
+	
