@@ -18,4 +18,23 @@
 
 public class MyString {
     // Your code goes here...
+    public static void main(String args[])
+    {
+        String str="a\n   \t    b  \n\n  \t\t\t c   ";
+        String ans="";
+        for(int i=0;i<str.length()-1;i++)
+        {
+            int val=str.charAt(i);
+            if(val >= 97 && val<123)
+            {
+                ans+=str.charAt(i);
+                ans+=" ";
+            }
+            
+        }
+        
+        ans+=str.charAt(str.length()-1);
+        // return ans;
+        System.out.println("suk: "+ans);
+    }
 }
