@@ -30,11 +30,9 @@ public class MyString {
                 ans+=str.charAt(i);
                 ans+=" ";
             }
-            
         }
         
         ans+=str.charAt(str.length()-1);
-        // return ans;
-        System.out.println("suk: "+ans);
+        System.out.println(ans);
     }
 }
