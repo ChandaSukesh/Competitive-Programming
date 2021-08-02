@@ -23,19 +23,15 @@ public class LongestDigitRun {
 				hmap.put(m,1);
 			}
 			else{
-				if(!hmap.containsKey(m))
+				if(hmap.containsKey(m))
 				{
-					hmap.put(m,1);
-				}
-				else{
 					hmap.put(m,hmap.get(m) + 1);
 				}
 			}
-			
 			prev=m;
 			n=n/10;
-
 		}
+
 		int ans=Integer.MIN_VALUE;
 		int key=0;
 		for(Map.Entry e:hmap.entrySet())
