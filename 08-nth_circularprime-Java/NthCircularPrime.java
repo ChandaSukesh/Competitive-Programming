@@ -42,28 +42,33 @@ public class NthCircularPrime {
 
 	public boolean checkRotation(int n)
 	{
+
+		// return true;
 		String str=String.valueOf(n);
-		for(int i=0;i<str.length();i++)
+		int len=str.length();
+		for(int i=0;i<len;i++)
 		{
 			if(str.charAt(i)=='0')
 			{
 				return false;
 			}
+			int res=Integer.parseInt(str.substring(i,len) + str.substring(0, i));
+			if(!checkPrime(res))
+			{
+				return false;
+			}
 		}
-		int len=str.length()-1;
-		int count=len;
-		int ans=0;
-		while(n>0)
-		{
-			int m=n%10;
-			ans =m*((int)Math.pow(10,count)) + ans;
-			count-=1;
-			n/=10;
-		}
-		if(checkPrime(ans))
-		{
-			return true;
-		}
-		return false;
+		return true;
+		// int count=len;
+		// int ans=0;
+		// while(n>0)
+		// {
+		// 	int m=n%10;
+		// 	ans =m*((int)Math.pow(10,count)) + ans;
+		// 	count-=1;
+		// 	n/=10;
+		// }
+		
+		// return false;
 	}
 }
