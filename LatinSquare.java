@@ -68,7 +68,6 @@ public class LatinSquare {
         {
             return false;
         }
-
         return true;
     }
 }
