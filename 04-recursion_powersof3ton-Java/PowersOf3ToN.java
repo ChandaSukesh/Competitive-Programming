@@ -30,31 +30,7 @@ public class PowersOf3ToN {
 			return arr;
 		}
       	arr.add(res);
-		// System.out.println("suk: "+arr.size());
 		return checkRecursion(n,power+1,arr);
 		
 	}
-	// public int[] powersOf3ToN(double n) {
-	// 	// Your code goes here
-	// 	int m=(int)Math.floor(n);
-	// 	int count=0;
-	// 	checkRecursion(m,count);
-	// 	return new int[0];
-	// }
-	// public List<Integer> checkRecursion(int n,int power)
-	// {
-	// 	ArrayList<Integer> arr=new ArrayList<>();
-	// 	if(power==0)
-	// 	{
-	// 		arr.add(1);
-	// 	}
-	// 	int res=(int)Math.pow(3,power);
-	// 	if(res>n)
-	// 	{
-	// 		return arr;
-	// 	}
-	// 	System.out.println("suk: "+arr.add(res));
-	// 	return checkRecursion(n,power+1);
-		
-	// }
 }
