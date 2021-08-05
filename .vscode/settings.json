@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "04-recursion_powersof3ton-Java"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Sukesh Chanda\\Desktop\\junit-4.9.jar"
+    ]
+}
