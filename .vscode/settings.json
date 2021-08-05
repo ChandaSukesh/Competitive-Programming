@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": [
+        "07-samechars-Java",
+        "05-nthwithproperty309-Java"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Sukesh Chanda\\Desktop\\junit-4.9.jar"
+    ]
+}
