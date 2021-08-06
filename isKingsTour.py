@@ -20,4 +20,42 @@
 
 def isKingsTour(board):
     # Your code goes here...
-    pass
+    if(len(board)==0):
+        return None
+    if(len(board[0])==0):
+        return None
+
+    for r in range(len(board)):
+        for c in range(len(board[0])):
+            if(board[r][c] == 0):
+                return False
+    i = 1
+    while(i < ((len(board))*(len(board[0])))):
+        r1, c1 = checkPosition(board, i)
+        r2, c2 = checkPosition(board, (i+1))
+        if(r1 == -8 or c1 == -8):
+            return False
+        i = i + 1
+        if(checkFn(r1, c1, r2, c2) == False):
+            return False
+    return True
+    
+def checkPosition(L, i):
+    for row in range(len(L)):
+        for cow in range(len(L[0])):
+            if(L[row][cow] == i):
+                return(row, cow)
+    return (-8, -8)
+
+def checkFn(r1, c1, r2, c2):
+    if(((abs(r1 - r2) <= 1) and (abs(c1 - c2) <= 1))):
+        return True
+    return False
+
+board=[ [  3, 2, 1 ],    	
+	[  6, 4, 9 ],   
+ 	[  5, 7, 8 ] ] 
+assert(isKingsTour(board)==True)
+
+# You can write your own test cases here...
+print("All test cases passed....")
