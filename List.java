@@ -46,6 +46,7 @@ public class List {
         for(int i=0;i<count;i++)
         {
             ansarr[i]=arr[i];
+            
         }
         return ansarr;
         
